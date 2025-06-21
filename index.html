@@ -28,6 +28,7 @@
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1rem;
       background: #fff;
       padding: 1rem;
@@ -75,6 +76,17 @@
     }
     img {
       border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+    .animated-img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .animated-img.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .footer-logos img {
       height: 100px;
@@ -87,6 +99,9 @@
     }
     footer {
       background: url('/image/contact/contact.png') center/cover no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       text-align: center;
       padding: 2rem 1rem;
       color: #111;
@@ -135,6 +150,16 @@
     button:hover {
       background: #6b3510;
     }
+    iframe.responsive-map {
+      width: 100%;
+      height: 400px;
+      border:0;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .footer-logos img { height: 80px; width: 80px; }
+    }
   </style>
 </head>
 <body>
@@ -167,8 +192,8 @@
 
       <div style="padding:52.73% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1095197998?h=e0a8d01728&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luxury Yacht"></iframe></div>
 
-      <img src="/image/experience/bali_wellness.jpg" alt="Luxury Bali Wellness Retreat" loading="lazy">
-      <img src="/image/experience/island.jpg" alt="Private Island Escape" loading="lazy">
+      <img class="animated-img" src="/image/experience/bali_wellness.jpg" alt="Luxury Bali Wellness Retreat" loading="lazy">
+      <img class="animated-img" src="/image/experience/island.jpg" alt="Private Island Escape" loading="lazy">
     </div>
   </section>
 
@@ -208,6 +233,11 @@
     </form>
   </section>
 
+  <section id="map">
+    <h2>Visit Us</h2>
+    <iframe class="responsive-map" src="https://www.google.com/maps/embed/v1/place?q=506+2nd+Ave,+Seattle,+WA+98104&key=YOUR_GOOGLE_MAPS_API_KEY" allowfullscreen></iframe>
+  </section>
+
   <footer>
     <p><i class="fas fa-envelope"></i> <a href="mailto:voyageprive@opulence.com">voyageprive@opulence.com</a></p>
     <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254712801712">+254 712 801712</a></p>
@@ -234,6 +264,17 @@
       }
       return true;
     }
+
+    // Animation for images
+    const animatedImages = document.querySelectorAll('.animated-img');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    animatedImages.forEach(img => observer.observe(img));
   </script>
 </body>
 </html>
