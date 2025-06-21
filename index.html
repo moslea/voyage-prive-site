@@ -5,53 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Voyagé Privé offers bespoke private charters, luxury travel, and elite island escapes. Request your tailored quote today." />
   <title>Voyagé Privé - Private Charter & Luxury Getaways</title>
-  <link rel="icon" href="/image/favicon.png" type="image/png" />
+  <link rel="icon" href="/image/contact/favicon.png" type="image/png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  color: #FFD700;
-  text-shadow:
-    0 0 5px #FFD700,
-    0 0 10px #FFD700,
-    0 0 20px #FFA500,
-    0 0 30px #FFA500,
-    0 0 40px #FFD700,
-    0 0 50px #FFA500;
-  animation: glow 2.5s ease-in-out infinite alternate;
-  pointer-events: none;
-  user-select: none;
-}
-@keyframes glow {
-  from {
-    text-shadow:
-      0 0 5px #FFD700,
-      0 0 10px #FFD700,
-      0 0 20px #FFA500,
-      0 0 30px #FFA500,
-      0 0 40px #FFD700,
-      0 0 50px #FFA500;
-  }
-  to {
-    text-shadow:
-      0 0 10px #FFD700,
-      0 0 20px #FFD700,
-      0 0 30px #FFA500,
-      0 0 40px #FFA500,
-      0 0 50px #FFD700,
-      0 0 60px #FFA500;
-  }
-}
-
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
@@ -63,10 +21,9 @@
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
-    /* Titles styling - bold and themed color */
     h2 {
       font-weight: bold;
-      color: #8B4513; /* warm brown */
+      color: #8B4513;
     }
     nav {
       display: flex;
@@ -81,7 +38,6 @@
       font-weight: bold;
       color: #111;
     }
-    /* Hero video styling */
     .hero {
       position: relative;
       width: 100%;
@@ -104,8 +60,6 @@
       font-size: 3rem;
       color: white;
       text-shadow: 2px 2px 6px #000;
-      pointer-events: none;
-      user-select: none;
       font-family: 'Playfair Display', serif;
       font-weight: 600;
     }
@@ -114,90 +68,29 @@
       max-width: 1000px;
       margin: auto;
     }
-    /* Experience grid styling */
     .experience-grid {
       display: grid;
       gap: 1.5rem;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    iframe, img {
-      width: 100%;
+    img {
       border-radius: 8px;
     }
-
-    /* Vimeo wrapper for lazy loading and fade effect */
-    .vimeo-wrapper {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 aspect */
-      border-radius: 8px;
-      overflow: hidden;
-      background: #000;
-      cursor: pointer;
+    .footer-logos img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 12px;
     }
-    .vimeo-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-      pointer-events: none;
-    }
-    .vimeo-wrapper iframe.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .video-placeholder {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      user-select: none;
-      transition: opacity 0.5s ease-in-out;
-      z-index: 2;
-    }
-    .vimeo-wrapper.loading .video-placeholder {
-      opacity: 0;
-      pointer-events: none;
-    }
-    /* Label below video */
-    .video-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .video-label {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      color: #8B4513;
-      font-family: 'Playfair Display', serif;
-    }
-    /* Form background */
     #quote {
-      background: url('/image/experinces/form-background.jpg') center/cover no-repeat;
+      background: url('/image/contact/form-background.jpg') center/cover no-repeat;
     }
-    /* Contact background */
     footer {
-      background: url('/image/contact.png') center/cover no-repeat;
+      background: url('/image/contact/contact.png') center/cover no-repeat;
       text-align: center;
       padding: 2rem 1rem;
       color: #111;
-      background-color: #f9f9f9; /* fallback */
-    }
-    .footer-logos {
-      margin: 2rem auto 1rem;
-      text-align: center;
-    }
-    .footer-logos img {
-      height: 40px;
-      margin: 0 10px;
-      vertical-align: middle;
+      background-color: #f9f9f9;
     }
     .floating-whatsapp {
       position: fixed;
@@ -214,7 +107,6 @@
       align-items: center;
       justify-content: center;
     }
-    /* Form styling */
     form {
       background: rgba(255,255,255,0.95);
       padding: 1rem;
@@ -246,62 +138,40 @@
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#experiences">Experiences</a>
     <a href="#quote">Quote</a>
   </nav>
 
-  <!-- Hero Section -->
   <div class="hero" role="banner" aria-label="Voyagé Privé Hero Video">
     <video autoplay muted loop playsinline>
-      <source src="/videos/hero.mp4" type="video/mp4" />
+      <source src="/image/videos/hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <h1>Voyagé Privé</h1>
   </div>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Us</h2>
     <p>Voyagé Privé curates exclusive travel journeys by air, land, and sea. Explore the world with premium charters, retreats, and personalized service for high-end clients.</p>
   </section>
 
-  <!-- Experiences Section -->
   <section id="experiences">
     <h2>Our Signature Experiences</h2>
     <div class="experience-grid">
 
-      <div class="video-container" style="text-align:center;">
-        <div class="vimeo-wrapper" data-src="https://player.vimeo.com/video/1095199511?h=355e78861f&autoplay=1&muted=1&loop=1" title="Private Jet Tour">
-          <div class="video-placeholder">Private Jet Tour</div>
-        </div>
-        <div class="video-label">Private Jet</div>
-      </div>
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1095199511?h=355e78861f&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Private Jet Tour"></iframe></div>
 
-      <div class="video-container" style="text-align:center;">
-        <div class="vimeo-wrapper" data-src="https://player.vimeo.com/video/1095200254?h=ecf2dfa2cc&autoplay=1&muted=1&loop=1" title="Luxury Cruise">
-          <div class="video-placeholder">Luxury Cruise</div>
-        </div>
-        <div class="video-label">Cruise</div>
-      </div>
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1095200254?h=ecf2dfa2cc&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luxury Cruise"></iframe></div>
 
-      <div class="video-container" style="text-align:center;">
-        <div class="vimeo-wrapper" data-src="https://player.vimeo.com/video/1095197998?h=e0a8d01728&autoplay=1&muted=1&loop=1" title="Luxury Yacht">
-          <div class="video-placeholder">Luxury Yacht</div>
-        </div>
-        <div class="video-label">Yacht</div>
-      </div>
+      <div style="padding:52.73% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1095197998?h=e0a8d01728&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luxury Yacht"></iframe></div>
 
       <img src="/image/experience/bali_wellness.jpg" alt="Luxury Bali Wellness Retreat" loading="lazy">
       <img src="/image/experience/island.jpg" alt="Private Island Escape" loading="lazy">
-
     </div>
   </section>
 
-  <!-- Experience Descriptions -->
   <section id="airborne-land-sea">
     <h2>Airborne Experiences</h2>
     <p>Experience the pinnacle of private aviation with our bespoke flights to the world’s most exclusive destinations. From the sun-soaked French Riviera to the ultra-private Maldives atolls, travel in ultimate comfort and style. Your journey begins the moment you board — personalized service, unrivaled privacy, and access to VIP-only airports await.</p>
@@ -313,10 +183,8 @@
     <p>Set sail on the world’s most exquisite waters with our premium yacht charters and island retreats. Cruise the Mediterranean’s glittering coastlines, explore secluded private islands in the Caribbean, or relax aboard a luxury superyacht in the Seychelles — all curated to deliver unparalleled indulgence, privacy, and breathtaking views.</p>
   </section>
 
-  <!-- Quote Form -->
   <section id="quote">
     <h2>Request a Personalized Quote</h2>
-
     <form action="https://formsubmit.co/moses.otieno@consultant.com" method="POST" onsubmit="return validateForm()">
       <input type="hidden" name="_next" value="/thank-you.html" />
       <input type="text" name="name" placeholder="Full Name" required />
@@ -332,9 +200,7 @@
       <textarea name="details" placeholder="Tell us more..." required></textarea>
       <div class="g-recaptcha" data-sitekey="6Lf3FGYrAAAAAF9wVio1FKjGkqfSeaL9KlMIqEzT"></div>
       <button type="submit">Submit</button>
-
-      <!-- Logos below submit button -->
-      <div class="footer-logos" aria-label="Partners and Sponsors" style="margin-top:1.5rem; text-align:center;">
+      <div class="footer-logos">
         <a href="https://www.yachtcharterfleet.com/" target="_blank" rel="noopener"><img src="/image/logo1.png" alt="Yacht Charter Fleet"></a>
         <a href="https://www.globalcharter.com/" target="_blank" rel="noopener"><img src="/image/logo2.png" alt="Global Charter"></a>
         <a href="https://www.royalcaribbean.com/" target="_blank" rel="noopener"><img src="/image/logo3.png" alt="Royal Caribbean"></a>
@@ -342,7 +208,6 @@
     </form>
   </section>
 
-  <!-- Footer / Contacts -->
   <footer>
     <p><i class="fas fa-envelope"></i> <a href="mailto:voyageprive@opulence.com">voyageprive@opulence.com</a></p>
     <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254712801712">+254 712 801712</a></p>
@@ -351,12 +216,10 @@
     <p><i class="fas fa-map-marker-alt"></i> 506 2nd Ave, Seattle, WA 98104</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
   <a class="floating-whatsapp" href="https://wa.me/254712801712" target="_blank" aria-label="WhatsApp Chat">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- JS Validation and Vimeo lazy-load with fade -->
   <script>
     function validateForm() {
       const form = document.forms[0];
@@ -371,62 +234,6 @@
       }
       return true;
     }
-
-    let currentWrapper = null;
-    let currentIframe = null;
-
-    document.querySelectorAll('.vimeo-wrapper').forEach(wrapper => {
-      wrapper.addEventListener('mouseenter', () => {
-        if (currentWrapper && currentWrapper !== wrapper) {
-          // Fade out old iframe
-          if (currentIframe) {
-            currentIframe.classList.remove('active');
-            setTimeout(() => {
-              currentIframe.remove();
-              currentIframe = null;
-              currentWrapper.classList.remove('loading');
-            }, 500);
-          }
-        }
-
-        if (!currentIframe || currentWrapper !== wrapper) {
-          // Create iframe and fade in
-          const iframe = document.createElement('iframe');
-          iframe.setAttribute('src', wrapper.dataset.src);
-          iframe.setAttribute('frameborder', '0');
-          iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
-          iframe.setAttribute('allowfullscreen', '');
-          iframe.classList.add('loading-iframe');
-          wrapper.appendChild(iframe);
-
-          // Trigger fade effect
-          setTimeout(() => {
-            iframe.classList.add('active');
-          }, 50);
-
-          // Hide placeholder with fade
-          wrapper.classList.add('loading');
-
-          currentIframe = iframe;
-          currentWrapper = wrapper;
-        }
-      });
-
-      wrapper.addEventListener('mouseleave', () => {
-        if (currentIframe && currentWrapper === wrapper) {
-          // Fade out iframe and show placeholder
-          currentIframe.classList.remove('active');
-          currentWrapper.classList.remove('loading');
-          setTimeout(() => {
-            if (currentIframe) {
-              currentIframe.remove();
-              currentIframe = null;
-              currentWrapper = null;
-            }
-          }, 500);
-        }
-      });
-    });
   </script>
 </body>
 </html>
