@@ -1,0 +1,36 @@
+# Node modules (if Vercel CLI or local dev uses them)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Vercel settings (optional - if you want to ignore local project config)
+.vercel/
+
+# Build/output directories (if applicable)
+dist/
+build/
+
+# Environment files (if used later)
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.tmp
+*~
+
+# OS-generated folders
+__MACOSX/
+
+# VSCode or IDE folders
+.vscode/
+.idea/
+
+# ZIPs or archives
+*.zip

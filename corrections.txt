@@ -1,0 +1,13 @@
+logos should be below, "Request a Personalized Quote" and above and above the contacts, 
+
+use the contact.png and form-background.jpg images
+
+ All titles should be bold and different color that blends with the therm of the page
+ 
+two whatsap numbers
++1 782-222-3755 add this as the second number
+
+hero video is hosted locally
+
+the hosted videos to auto play when cursor hover on them, 
+only one video should play at a time in the page
